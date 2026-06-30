@@ -14,7 +14,6 @@ import discount from './slices/discount';
 import deliveries from './slices/deliveries';
 import blog from './slices/blog';
 import notification from './slices/notification';
-import courier from './slices/courier';
 import user from './slices/user';
 import extraGroup from './slices/extraGroup';
 import extraValue from './slices/extraValue';
@@ -97,7 +96,6 @@ import parcelReview from './slices/parcelReview';
 import requestModels from './slices/request-models';
 import paymentToPartners from './slices/paymentToPartners';
 import shopReviews from './slices/shop-reviews';
-import courierRequest from './slices/courier-request';
 import packhouse from './slices/packhouse';
 import comboCategories from './slices/combo-categories';
 
@@ -151,7 +149,6 @@ const rootReducer = {
   deliveries,
   blog,
   notification,
-  courier,
   user,
   extraGroup,
   extraValue,
@@ -202,7 +199,6 @@ const rootReducer = {
   requestModels,
   paymentToPartners,
   shopReviews,
-  courierRequest,
   packhouse,
   comboCategories,
 };
