@@ -6,7 +6,7 @@ import userService from '../../services/user';
 import StatisticNumberWidget from './statisticNumberWidget';
 import StatisticPriceWidget from './statisticPriceWidget';
 
-export default function Market attendantDashboard() {
+export default function MarketAttendantDashboard() {
   const { t } = useTranslation();
   const [userData, setUserData] = useState(null);
   const { counts } = useSelector(

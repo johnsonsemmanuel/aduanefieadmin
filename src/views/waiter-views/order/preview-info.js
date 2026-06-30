@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Modal, Spin, Table } from 'antd';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import Column from 'antd/lib/table/Column';
 import { PrinterOutlined } from '@ant-design/icons';
 import moment from 'moment';

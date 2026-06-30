@@ -7,7 +7,7 @@ import {
   clearCurrentOrders,
   clearItems,
   setItems,
-} from '../../../../../redux/slices/market.attendantOrder';
+} from '../../../../../redux/slices/marketAttendantOrder';
 import { shallowEqual, useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { LoadingOutlined } from '@ant-design/icons';
@@ -15,8 +15,8 @@ import { useEffect } from 'react';
 import { mockOrderList } from '../../../../../constants';
 import OrderCardLoader from '../../../../../components/order-card-loader';
 import { toast } from 'react-toastify';
-import orderService from '../../../../../services/market.attendant/order';
-import OrderCardMarket attendant from 'components/order-card-market.attendant';
+import orderService from '../../../../../services/market-attendant/order';
+import OrderCardMarketAttendant from 'components/order-card-market-attendant';
 const statuses = [
   'new',
   'accepted',
@@ -38,8 +38,8 @@ const Incorporate = ({
   setType,
 }) => {
   const dispatch = useDispatch();
-  const { items } = useSelector((state) => state.market.attendantOrder, shallowEqual);
-  const orders = useSelector((state) => state.market.attendantOrder, shallowEqual);
+  const { items } = useSelector((state) => state.marketAttendantOrder, shallowEqual);
+  const orders = useSelector((state) => state.marketAttendantOrder, shallowEqual);
   const [key, setKey] = useState('');
   const [current, setCurrent] = useState({});
   const [currentCId, setCurrentCId] = useState({});
@@ -186,7 +186,7 @@ const Incorporate = ({
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                             >
-                              <OrderCardMarket attendant
+                              <OrderCardMarketAttendant
                                 data={data}
                                 goToShow={goToShow}
                               />

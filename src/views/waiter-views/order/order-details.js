@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Card, Table, Image, Tag, Button, Space, Row, Col, Spin } from 'antd';
 import { useParams } from 'react-router-dom';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import getImage from '../../../helpers/getImage';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { disableRefetch, setMenuData } from '../../../redux/slices/menu';
@@ -14,7 +14,7 @@ import { BsCalendarDay } from 'react-icons/bs';
 import { FiShoppingCart } from 'react-icons/fi';
 import moment from 'moment';
 
-export default function Market attendantOrderDetails() {
+export default function MarketAttendantOrderDetails() {
   const { activeMenu } = useSelector((state) => state.menu, shallowEqual);
   const { defaultCurrency } = useSelector(
     (state) => state.currency,

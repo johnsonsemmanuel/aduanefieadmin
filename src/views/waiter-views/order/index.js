@@ -12,21 +12,21 @@ import { Context } from '../../../context/context';
 import { batch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
-import { clearItems, fetchOrders } from '../../../redux/slices/market.attendantOrder';
-import { fetchOrders as fetchMarket attendantOrders } from '../../../redux/slices/market.attendantOrder';
+import { clearItems, fetchOrders } from '../../../redux/slices/marketAttendantOrder';
+import { fetchOrders as fetchMarketAttendantOrders } from '../../../redux/slices/marketAttendantOrder';
 import useDidUpdate from '../../../helpers/useDidUpdate';
 import formatSortType from '../../../helpers/formatSortType';
 import SearchInput from '../../../components/search-input';
 import numberToPrice from '../../../helpers/numberToPrice';
 import FilterColumns from '../../../components/filter-column';
 import CustomModal from '../../../components/modal';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import OrderCourier from './orderCourier';
 import RiveResult from 'components/rive-result';
 import { DebounceSelect } from 'components/search';
 import bookingTable from 'services/rest/table';
 
-export default function Market attendantOrder() {
+export default function MarketAttendantOrder() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -57,7 +57,7 @@ export default function Market attendantOrder() {
     orderService
       .attachToMe(id)
       .then(() => {
-        dispatch(fetchMarket attendantOrders(paramsData));
+        dispatch(fetchMarketAttendantOrders(paramsData));
       })
       .finally(() => {
         setIsAttaching(false);
@@ -155,7 +155,7 @@ export default function Market attendantOrder() {
 
   const { activeMenu } = useSelector((state) => state.menu, shallowEqual);
   const { orders, meta, loading, params } = useSelector(
-    (state) => state.market.attendantOrder,
+    (state) => state.marketAttendantOrder,
     shallowEqual
   );
   const data = activeMenu?.data;
@@ -201,19 +201,19 @@ export default function Market attendantOrder() {
       .then(() => {
         toast.success(t('successfully.deleted'));
         setIsModalVisible(false);
-        dispatch(fetchMarket attendantOrders(paramsData));
+        dispatch(fetchMarketAttendantOrders(paramsData));
         setText(null);
       })
       .finally(() => setLoadingBtn(false));
   };
 
   useDidUpdate(() => {
-    dispatch(fetchMarket attendantOrders(paramsData));
+    dispatch(fetchMarketAttendantOrders(paramsData));
   }, [activeMenu?.data]);
 
   useEffect(() => {
     if (activeMenu?.refetch) {
-      dispatch(fetchMarket attendantOrders(paramsData));
+      dispatch(fetchMarketAttendantOrders(paramsData));
       dispatch(disableRefetch(activeMenu));
     }
   }, [activeMenu?.refetch]);

@@ -72,8 +72,8 @@ import SellerPaymentFromPaymentRoutes from './seller/payment-from-partner';
 import SellerPackhouseRoutes from './seller/packhouse';
 
 // ** market.attendant routes ** ----------------
-import Market attendantAppRoutes from './market.attendant/app';
-import Market attendantOrderRoutes from './market.attendant/order';
+import MarketAttendantAppRoutes from './market-attendant/app';
+import MarketAttendantOrderRoutes from './market-attendant/order';
 
 // ** Merge Routes
 const AllRoutes = [
@@ -150,8 +150,8 @@ const AllRoutes = [
   ...SellerPackhouseRoutes,
 
   // market.attendant routes
-  ...Market attendantAppRoutes,
-  ...Market attendantOrderRoutes,
+  ...MarketAttendantAppRoutes,
+  ...MarketAttendantOrderRoutes,
 ];
 
 export { AllRoutes };

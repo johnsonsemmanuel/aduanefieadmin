@@ -1,7 +1,7 @@
 // ** React Imports
 import { lazy } from 'react';
 
-const Market attendantOrderRoutes = [
+const MarketAttendantOrderRoutes = [
   {
     path: 'market.attendant/orders',
     component: lazy(() => import('views/market.attendant-views/order')),
@@ -32,4 +32,4 @@ const Market attendantOrderRoutes = [
   },
 ];
 
-export default Market attendantOrderRoutes;
+export default MarketAttendantOrderRoutes;

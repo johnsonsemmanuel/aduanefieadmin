@@ -10,14 +10,14 @@ import {
 } from '../../../redux/slices/menu';
 import { useTranslation } from 'react-i18next';
 import useDidUpdate from '../../../helpers/useDidUpdate';
-import { fetchOrders, handleSearch } from '../../../redux/slices/market.attendantOrder';
+import { fetchOrders, handleSearch } from '../../../redux/slices/marketAttendantOrder';
 import SearchInput from '../../../components/search-input';
 import userService from '../../../services/seller/user';
 import { fetchRestOrderStatus } from '../../../redux/slices/orderStatus';
 import DeleteButton from '../../../components/delete-button';
 import { Context } from '../../../context/context';
 import { toast } from 'react-toastify';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import Incorporate from './dnd/Incorporate';
 import {
   clearItems,
@@ -27,7 +27,7 @@ import {
   fetchNewOrders,
   fetchOnAWayOrders,
   fetchReadyOrders,
-} from '../../../redux/slices/market.attendantOrder';
+} from '../../../redux/slices/marketAttendantOrder';
 import { batch } from 'react-redux';
 import OrderCourier from './orderCourier';
 import { clearOrder } from '../../../redux/slices/order';

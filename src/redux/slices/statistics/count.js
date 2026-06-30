@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import statisticService from '../../../services/statistics';
 import sellerStatisticService from '../../../services/seller/statistics';
 import courierStatisticService from '../../../services/courier/statistics';
-import market.attendantStatisticService from '../../../services/market.attendant/statistics';
+import marketAttendantStatisticService from '../../../services/market-attendant/statistics';
 
 const initialState = {
   loading: false,
@@ -34,10 +34,10 @@ export const fetchCourierStatisticsCount = createAsyncThunk(
   }
 );
 
-export const fetchMarket attendantStatisticsCount = createAsyncThunk(
-  'statistics/fetchMarket attendantStatisticsCount',
+export const fetchMarketAttendantStatisticsCount = createAsyncThunk(
+  'statistics/fetchMarketAttendantStatisticsCount',
   (params = {}) => {
-    return market.attendantStatisticService.getAllCount(params).then((res) => res);
+    return marketAttendantStatisticService.getAllCount(params).then((res) => res);
   }
 );
 
@@ -101,16 +101,16 @@ const statisticsCountSlice = createSlice({
     );
 
     // market.attendant
-    builder.addCase(fetchMarket attendantStatisticsCount.pending, (state) => {
+    builder.addCase(fetchMarketAttendantStatisticsCount.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(fetchMarket attendantStatisticsCount.fulfilled, (state, action) => {
+    builder.addCase(fetchMarketAttendantStatisticsCount.fulfilled, (state, action) => {
       const { payload } = action;
       state.loading = false;
       state.counts = payload.data;
       state.error = '';
     });
-    builder.addCase(fetchMarket attendantStatisticsCount.rejected, (state, action) => {
+    builder.addCase(fetchMarketAttendantStatisticsCount.rejected, (state, action) => {
       state.loading = false;
       state.counts = {};
       state.error = action.error.message;

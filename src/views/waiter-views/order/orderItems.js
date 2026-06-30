@@ -11,7 +11,7 @@ import {
   setOrderTotal,
   verifyOrderCoupon,
 } from '../../../redux/slices/order';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import calculateTotalPrice from '../../../helpers/calculateTotalPrice';
 import ExtrasModal from './extrasModal';
 import numberToPrice from '../../../helpers/numberToPrice';

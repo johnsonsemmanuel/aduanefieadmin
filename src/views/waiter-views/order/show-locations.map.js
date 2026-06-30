@@ -2,7 +2,7 @@ import GoogleMapReact from 'google-map-react';
 import { Button, Card, Col, Modal, Row, Steps, Tag } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import Loading from '../../../components/loading';
 import { BsCalendar2Day, BsCheckLg } from 'react-icons/bs';
 import { shallowEqual, useSelector } from 'react-redux';

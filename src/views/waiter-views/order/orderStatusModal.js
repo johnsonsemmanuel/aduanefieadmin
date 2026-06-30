@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Col, Form, Modal, Row, Select } from 'antd';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import { setRefetch } from '../../../redux/slices/menu';
 
 const allStatuses = ['new', 'accepted', 'ready', 'on_a_way', 'delivered'];

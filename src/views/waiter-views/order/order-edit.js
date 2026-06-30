@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next';
 import transactionService from '../../../services/transaction';
 import calculateTotalPrice from '../../../helpers/calculateTotalPrice';
 
-export default function Market attendantOrderEdit() {
+export default function MarketAttendantOrderEdit() {
   const { t } = useTranslation();
   const [form] = Form.useForm();
   const dispatch = useDispatch();

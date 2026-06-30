@@ -19,7 +19,7 @@ import { BsTruck } from 'react-icons/bs';
 
 const { Meta } = Card;
 
-const OrderCardMarket attendant = ({ data: item, goToShow, loading }) => {
+const OrderCardMarketAttendant = ({ data: item, goToShow, loading }) => {
   const { t } = useTranslation();
   const data = [
     {
@@ -84,4 +84,4 @@ const OrderCardMarket attendant = ({ data: item, goToShow, loading }) => {
   );
 };
 
-export default OrderCardMarket attendant;
+export default OrderCardMarketAttendant;

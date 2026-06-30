@@ -1198,7 +1198,7 @@ const courierRoutes = [
   },
 ];
 
-const market.attendantRoutes = [
+const marketAttendantRoutes = [
   {
     name: 'my.orders',
     icon: 'orders',
@@ -1307,6 +1307,6 @@ export const data = {
   seller: sellerRoutes,
   moderator: moderatorRoutes,
   courier: courierRoutes,
-  market.attendant: market.attendantRoutes,
+  market.attendant: marketAttendantRoutes,
   parcel: parcelRoutes,
 };

@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import orderService from '../../services/market.attendant/order';
+import orderService from '../../services/market-attendant/order';
 
 const initialState = {
   loading: false,
@@ -146,8 +146,8 @@ export const fetchCanceledOrders = createAsyncThunk(
   }
 );
 
-const market.attendantOrderSlice = createSlice({
-  name: 'market.attendantOrders',
+const marketAttendantOrderSlice = createSlice({
+  name: 'marketAttendantOrders',
   initialState,
   extraReducers: (builder) => {
     //handleSearch
@@ -365,5 +365,5 @@ const market.attendantOrderSlice = createSlice({
   },
 });
 export const { changeLayout, setItems, clearCurrentOrders, clearItems } =
-  market.attendantOrderSlice.actions;
-export default market.attendantOrderSlice.reducer;
+  marketAttendantOrderSlice.actions;
+export default marketAttendantOrderSlice.reducer;

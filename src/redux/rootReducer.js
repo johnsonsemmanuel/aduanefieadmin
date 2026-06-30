@@ -81,7 +81,7 @@ import menuCategory from './slices/menuCategory';
 import careerCategory from './slices/career-category';
 import career from './slices/career';
 import pages from './slices/pages';
-import market.attendantOrder from './slices/market.attendantOrder';
+import marketAttendantOrder from './slices/marketAttendantOrder';
 import bookingZone from './slices/booking-zone';
 import bookingTable from './slices/booking-tables';
 import bookingTime from './slices/booking-time';
@@ -107,7 +107,7 @@ const rootReducer = {
   bookingTime,
   bookingZone,
   bookingTable,
-  market.attendantOrder,
+  marketAttendantOrder,
   pages,
   career,
   careerCategory,

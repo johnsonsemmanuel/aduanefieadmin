@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Col, Form, Modal, Row, Select } from 'antd';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import orderService from '../../../services/market.attendant/order';
+import orderService from '../../../services/market-attendant/order';
 import { setRefetch } from '../../../redux/slices/menu';
 import { useTranslation } from 'react-i18next';
 

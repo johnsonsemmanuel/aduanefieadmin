@@ -9,7 +9,7 @@ import { AiOutlineFilePdf } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 const Meta = Card.Meta;
 
-const Market attendantDownloadModal = ({ id, handleCancel }) => {
+const MarketAttendantDownloadModal = ({ id, handleCancel }) => {
   const [downloading, setDownloading] = useState(null);
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -77,4 +77,4 @@ const Market attendantDownloadModal = ({ id, handleCancel }) => {
   );
 };
 
-export default Market attendantDownloadModal;
+export default MarketAttendantDownloadModal;
